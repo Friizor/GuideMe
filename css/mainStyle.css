@@ -1,0 +1,642 @@
+/* 
+
+  Hello, You.
+
+  When I wrote this code, only I and God and few youtubers which I can't find them anymore
+  Knew what it was.
+  Now, only God Knows,
+
+  So if you are done trying to 'optimize'
+  this shit (and failed) :
+  1- Please don't ask me to fix it or ask for my help you're responsible for your own shit 
+  2- Please make a copy of the project before trying to add any features
+  3- Please increment the following counter as warning to the next guy : 
+
+  total_hours_wasted_here = lost counting on 32 hour.
+
+  Code By Friizor && Islam_Puth.
+
+  Good Luck :")
+
+*/
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --white-color: #fff;
+  --blue-color: #ff7f50;
+  --grey-color: #707070;
+  --grey-color-light: #aaa;
+}
+
+body {
+  background-color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+/* navbar */
+.navbar {
+  position: relative;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background-color: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  z-index: 1000;
+  box-shadow: 0 0 2px var(--grey-color-light);
+}
+
+.logolink {
+  text-decoration: none;
+  color: #000;
+}
+
+.logo_item {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.navbar img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.search_bar {
+  height: 47px;
+  max-width: 430px;
+  width: 100%;
+}
+
+.search_bar input {
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  font-size: 18px;
+  outline: none;
+  background-color: var(--white-color);
+  color: var(--grey-color);
+  border: 1px solid var(--grey-color-light);
+  padding: 0 20px;
+}
+
+.navbar_content {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+}
+
+.navbar_content i {
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--grey-color);
+}
+
+/* sidebar */
+.sidebar {
+  background-color: var(--white-color);
+  width: 260px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 80px 20px;
+  overflow-y: scroll;
+  box-shadow: 0 0 1px var(--grey-color-light);
+  transition: all 0.5s ease;
+}
+
+.sidebar.close {
+  padding: 60px 0;
+  width: 80px;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.menu_content {
+  position: relative;
+}
+
+.menu_title {
+  margin: 15px 0;
+  padding: 0 20px;
+  font-size: 18px;
+}
+
+.sidebar.close .menu_title {
+  padding: 6px 30px;
+}
+
+.menu_title::before {
+  color: var(--grey-color);
+  white-space: nowrap;
+}
+
+.menu_dahsboard::before {
+  content: "Dashboard";
+}
+
+.menu_editor::before {
+  content: "Action";
+}
+
+.menu_setting::before {
+  content: "Setting";
+}
+
+.sidebar.close .menu_title::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 18px;
+  border-radius: 12px;
+  background: var(--grey-color-light);
+}
+
+.menu_items {
+  padding: 0;
+  list-style: none;
+}
+
+.navlink_icon {
+  position: relative;
+  font-size: 22px;
+  min-width: 50px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.navlink_icon::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: calc(100% + 100px);
+  left: -20px;
+}
+
+.navlink_icon:hover {
+  background: var(--blue-color);
+}
+
+.sidebar .nav_link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 4px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--grey-color);
+  white-space: nowrap;
+}
+
+.sidebar.close .navlink {
+  display: none;
+}
+
+.nav_link:hover {
+  color: var(--white-color);
+  background: var(--blue-color);
+}
+
+.sidebar.close .nav_link:hover {
+  background: var(--white-color);
+}
+
+.submenu_item {
+  cursor: pointer;
+}
+
+.submenu {
+  display: none;
+}
+
+.submenu_item .arrow-left {
+  position: absolute;
+  right: 10px;
+  display: inline-block;
+  margin-right: auto;
+}
+
+.sidebar.close .submenu {
+  display: none;
+}
+
+.show_submenu~.submenu {
+  display: block;
+}
+
+.show_submenu .arrow-left {
+  transform: rotate(90deg);
+}
+
+.submenu .sublink {
+  padding: 15px 15px 15px 52px;
+}
+
+.bottom_content {
+  position: fixed;
+  bottom: 60px;
+  left: 0;
+  width: 260px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.bottom {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 0;
+  justify-content: space-around;
+  padding: 18px 0;
+  text-align: center;
+  width: 100%;
+  color: var(--grey-color);
+  border-top: 1px solid var(--grey-color-light);
+  background-color: var(--white-color);
+}
+
+.bottom i {
+  font-size: 20px;
+}
+
+.bottom span {
+  font-size: 18px;
+}
+
+.sidebar.close .bottom_content {
+  width: 50px;
+  left: 15px;
+}
+
+.sidebar.close .bottom span {
+  display: none;
+}
+
+.sidebar.hoverable .collapse_sidebar {
+  display: none;
+}
+
+#sidebarOpen {
+  display: none;
+}
+
+.container {
+  margin-left: 280px;
+  margin-right: 20px;
+  transition: all 0.5s ease;
+
+}
+
+.container1 {
+  margin-left: 100px;
+  margin-right: 20px;
+  transition: all 0.5s ease;
+}
+
+.category-container {
+  list-style: none;
+  display: flex;
+  border-bottom: 1px solid #aaa;
+  display: flex;
+  justify-content: center;
+}
+
+.category {
+  margin-right: 20px;
+}
+
+.category-container a {
+  text-decoration: none;
+  color: #707070;
+}
+
+.category-container a:hover {
+  color: #ff7f50;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  max-width: 1250px;
+  margin: 30px auto;
+  padding: 20px;
+  gap: 15px;
+}
+
+.card-list .card-item {
+  background: #fff;
+  padding: 26px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: border 0.5s ease;
+}
+
+.card-list .card-item:hover {
+  border: 2px solid #000;
+}
+
+.card-list .card-item img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.card-list span {
+  display: inline-block;
+  background: #F7DFF5;
+  margin-top: 32px;
+  padding: 8px 15px;
+  font-size: 0.75rem;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.card-list .designer {
+  background-color: #d1e8ff;
+  color: #2968a8;
+}
+
+.card-item h3 {
+  color: #000;
+  font-size: 1.438rem;
+  margin-top: 28px;
+  font-weight: 600;
+}
+
+.card-item .arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 50%;
+  margin-top: 40px;
+  transition: 0.2s ease;
+}
+
+.card-list .card-item:hover .arrow {
+  background: #000;
+  color: #fff;
+}
+
+.mainInfo {
+  display: flex;
+}
+
+.mainInfo .personalInfo .titel {
+  display: flex;
+}
+
+.titel i {
+  font-size: 28px;
+  margin-left: 10px;
+  margin-top: 10px;
+  color: #707070;
+  transition: all 0.3s ease;
+}
+
+.titel i:hover {
+  color: #ff7f50;
+}
+
+.personalInfo .log-out {
+  margin-top: 10px;
+}
+
+.personalInfo .log-out button{
+  padding: 5px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.personalInfo .log-out button:hover {
+  color: #f5f5f5;
+  background-color: #ff7f50;
+  scale: 1.1;
+}
+
+.mainInfo img {
+  width: 200px;
+  margin-top: 20px;
+  border-radius: 50%;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mainInfo .personalInfo {
+  margin-top: 20px;
+  margin-left: 15px;
+  border-left: 1px solid #707070;
+  padding-left: 10px;
+  height: fit-content;
+}
+
+hr {
+  width: 99%;
+  margin-top: 10px;
+  height: 1px;
+  background-color: #b2b2b2;
+  border: none;
+  border-radius: 8px;
+}
+
+.edit_profil h1{
+  font-weight: normal;
+  border-bottom: 1px solid #b2b2b2;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+
+.edit_profil form label {
+  display: block
+}
+
+.edit_profil form input {
+  width: 250px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #f3f3f3;
+  border: none;
+  outline: none;
+  padding-left: 20px;
+}
+
+.edit_profil form input[type=submit]{
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit_profil form input[type=submit]:hover{
+  color: #f5f5f5;
+  background-color: #ff7f50;
+
+}
+
+.postForm label {
+  color: var(--grey-color);
+}
+
+.postForm input[type=text] {
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid var(--grey-color-light);
+  padding-left: 8px;
+  height: 40px;
+  width: 100%;
+}
+
+.postForm textarea {
+  border: 1px solid var(--grey-color-light);
+  border-radius: 8px;
+  width: 100%;
+  height: 70px;
+  padding-left: 8px;
+  outline: none;
+}
+
+.wil {
+  margin-bottom: 5px;
+}
+
+.imagInput {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.postForm input[type=submit] {
+  color: #fff;
+  font-size: 20px;
+  width: 300px;
+  background-color: #ff7f50;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.postForm input[type=submit]:hover {
+  background-color: #ffa98a;
+}
+
+.imagInput label {
+  display: flow-root;
+  margin: 8px;
+}
+
+.postForm select {
+  outline: none;
+  border-radius: 8px;
+  padding: 3px;
+}
+.imagInput input {
+  padding: 5px;
+  border-radius: 8px;
+  background-color: #f3f3f3;
+  cursor: pointer;
+}
+
+
+@media (max-width: 1200px) {
+  .card-list .card-item {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .card-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .mainInfo img {
+    width: 10px;
+  }
+
+  .mainInfo .personalInfo .titel h1 {
+    font-size: 20px;
+  }
+
+  .titel i {
+    font-size: 18px;
+    margin-top: 5px;
+  }
+
+  .mainInfo .personalInfo p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .card-list {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #sidebarOpen {
+    font-size: 25px;
+    display: block;
+    margin-right: 10px;
+    cursor: pointer;
+    color: var(--grey-color);
+  }
+
+  .sidebar.close {
+    left: -100%;
+  }
+
+  .search_bar {
+    display: none;
+  }
+
+  .sidebar.close .bottom_content {
+    left: -100%;
+  }
+
+  .container {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .mainInfo img {
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .mainInfo img {
+    width: 100px;
+  }
+}
+
+/* Fuck Me */

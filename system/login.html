@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="../items/favicon.png" type="image/png">
+    <title>Login & Registration Form</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="forms">
+            <!-- Login Form -->
+            <div class="form login">
+                <span class="title">Login</span>
+
+                <form action="loginSystem.php" method="post">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your email" name="loginEmail" id="loginEmail" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="loginPassword" name="loginPassword" class="password" placeholder="Enter your password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Remember me</label>
+                        </div>
+
+                        <a href="#" class="text">Forgot password?</a>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="submit" value="Login" name="login">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Not a member?
+                        <a href="#" class="text signup-link">Signup Now</a>
+                    </span>
+                </div>
+            </div>
+
+
+            <!-- Registration Form -->
+            <div class="form signup">
+                <span class="title">Registration</span>
+
+                <form action="singupSystem.php" method="post" id="signupForm">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your name" id="username" name="username" required>
+                        <i class="uil uil-user"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your email" oninput="emailVer()" id="singUpEmail" name="singUpEmail" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div id="emailError" style="display:none; color:red;">Email is already used.</div>
+                    <div class="input-field">
+                        <input type="password" class="password" name="password" id="password" placeholder="Create a password" required oninput="checklen()">
+                        <i class="uil uil-lock icon"></i>
+                    </div>
+                    <div id="passwordLengthError" style="display:none; color:red;">Password must be at least 8 characters long</div>
+                    <div class="input-field">
+                        <input type="password" class="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm a password" required oninput="check()">
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+                    <div id="passwordError" style="display:none; color:red;">Passwords do not match</div>
+
+
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="termCon" required>
+                            <label for="termCon" class="text">I accepted all <a href="#" class="text">terms and conditions</a></label>
+                        </div>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="submit" value="Signup" name="singup">
+                    </div>
+                </form>
+
+
+                <div class="login-signup">
+                    <span class="text">Already a member?
+                        <a href="#" class="text login-link">Login Now</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        function checklen() {
+            var password = document.getElementById("password").value;
+            var passwordErrorlen = document.getElementById("passwordLengthError");
+
+            if (password.length < 8) {
+                passwordErrorlen.style.display = "block";
+            } else {
+                passwordErrorlen.style.display = "none";
+            }
+        }
+
+        function check() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var passwordError = document.getElementById("passwordError");
+            var passwordErrorlen = document.getElementById("passwordLengthError");
+
+            if (password !== confirmPassword) {
+                passwordError.style.display = "block";
+                //passwordErrorlen.style.display = "block";
+            } else {
+                passwordError.style.display = "none";
+                //passwordErrorlen.style.display = "none";
+            }
+        }
+
+
+        function checkPasswordsMatch(event) {
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+            var passwordError = document.getElementById('passwordError');
+
+            if (password !== confirmPassword || password.length < 8) {
+                passwordError.style.display = 'block';
+                event.preventDefault();
+            } else {
+                passwordError.style.display = 'none';
+            }
+        }
+
+
+        window.onload = function() {
+            const form = document.getElementById('signupForm');
+            form.addEventListener('submit', checkPasswordsMatch);
+        };
+    </script>
+</body>
+
+
+
+</html>
