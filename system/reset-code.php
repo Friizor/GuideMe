@@ -54,3 +54,6 @@ if($email == false){
     
 </body>
 </html>
+
+<!--  Made By Friizor & Islam Puth. 
+      Copyright © 2024 Guide Me All rights reserved -->

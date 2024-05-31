@@ -1,5 +1,8 @@
 <?php
 
+//Made By Friizor & Islam Puth. 
+//Copyright © 2024 Guide Me All rights reserved
+
 //WARNING : this php code use otp mail verification 
 //this code need sendmail configuration to work
 //Please make sure your localhost xampp or wamp... is well cofigure.
