@@ -26,7 +26,7 @@
 
       <div class="navbar_content">
         <i class='bx bx-bell'></i>
-        <a href="../profil/profile.html">
+        <a href="../profil/profile.php">
           <img src="../items/Default_pfp.jpg" alt="" class="profile" />
         </a>
       </div>
@@ -82,7 +82,7 @@
             </ul>
           </li>
           <li class="item">
-            <a href="../upload/upload.html" class="nav_link">
+            <a href="../upload/upload.php" class="nav_link">
               <span class="navlink_icon">
                 <i class="bx bx-cloud-upload"></i>
               </span>

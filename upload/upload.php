@@ -1,3 +1,29 @@
+<?php 
+require_once ("../system/dataControlle.php"); 
+//session_start();
+$email = $_SESSION['email'];
+$password = $_SESSION['password'];
+if($email != false && $password != false){
+    $sql = "SELECT * FROM usertable WHERE email = '$email'";
+    $run_Sql = mysqli_query($con, $sql);
+    if($run_Sql){
+        $fetch_info = mysqli_fetch_assoc($run_Sql);
+        $status = $fetch_info['status'];
+        $code = $fetch_info['code'];
+        if($status == "verified"){
+            if($code != 0){
+                header('Location: ../system/reset-code.php');
+            }
+        }else{
+            header('Location: ../system/user-otp.php');
+        }
+    }
+}else{
+    header('Location: ../system/login-user.php');
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +36,7 @@
     <link rel="stylesheet" href="../css/mainStyle.css">
 
     <link rel="shortcut icon" href="../items/favicon.png" type="image/png">
-    
+
 </head>
 
 <body>
@@ -18,7 +44,7 @@
         <nav class="navbar">
             <div class="logo_item">
                 <i class="bx bx-menu" id="sidebarOpen"></i>
-                <a href="../app/app.html" class="logolink">
+                <a href="../app/app.php" class="logolink">
                     <h3>Guide<font color="#ff7f50">Me.</font>
                     </h3>
                 </a>
@@ -30,7 +56,7 @@
 
             <div class="navbar_content">
                 <i class='bx bx-bell'></i>
-                <a href="../profil/profile.html">
+                <a href="../profil/profile.php">
                     <img src="../items/Default_pfp.jpg" alt="" class="profile" />
                 </a>
             </div>
@@ -41,7 +67,7 @@
                 <ul class="menu_items">
                     <div class="menu_title menu_dahsboard"></div>
                     <li class="item">
-                        <a href="../app/app.html" class="nav_link">
+                        <a href="../app/app.php" class="nav_link">
                             <span class="navlink_icon">
                                 <i class="bx bx-home-alt"></i>
                             </span>
@@ -137,38 +163,49 @@
     </header>
 
     <div class="container">
-        <div class="content">
-            <div class="mainInfo">
-                <img src="../items/Default_pfp.jpg" alt="Profile Img" class="profile">
-                <div class="personalInfo">
-                    <div class="titel">
-                        <h1>Username</h1>
-                        <a href="">
-                            <i class="bx bx-cog"></i>
-                        </a>
-                    </div>
-                    <p>example@gmail.com</p>
-                    <div class="log-out">
-                        <button>Log Out<i class='bx bx-log-out-circle'></i></button>
-                    </div>
-                </div>
+        <h1 style="font-weight: 200;">Upload New Post</h1>
+
+        <form action="#" method="post" class="postForm">
+            <label for="title">Article Title</label><br>
+            <input type="text" name="title" id="title" placeholder="pleace set the article title"><br>
+
+            <label for="discription">Discription</label><br>
+            <textarea name="discri" id="discription" placeholder="Descripe the article in few line "></textarea>
+            <div class="wil">
+                <label for="wilaya">Wilaya :</label>
+                <select name="wilaya" id="wilaya" class="select">
+                    <option value="Alger">Alger</option>
+                    <option value="Boumerdes">Boumerdes</option>
+                    <option value="Setif">Setif</option>
+                    <option value="Tipaza">Tipaza</option>
+                </select>
             </div>
-        </div>
-        <hr>
-        <div class="edit_profil">
-            <div class="edit_title">
-                <h1>Edit profile </h1>
+
+            <div class="cat">
+                <label for="cat">Category :</label>
+                <select name="cat" id="cat" class="select">
+                    <option value="Restaurants">Restaurants</option>
+                    <option value="Cosmetics">Cosmetics</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Grocery">Grocery</option>
+                    <option value="Mall">Mall</option>
+                    <option value="Park">Park</option>
+                </select><br>
             </div>
-            <form action="#" method="post">
-                <label for="username">Userename :</label>
-                <input type="text" name="username" id="username" value="" placeholder="username...">
-                <label for="email">Email :</label>
-                <input type="email" name="email" id="email" value="" placeholder="email..."><br><br>
-                <label for="pdp">Edit Profile Picture :</label>
-                <input type="file" name="pdp" id="pdp"><br><br>
-                <input type="submit" value="Edit">
-            </form>
-        </div>
+
+            <div class="imagInput">
+                <label for="pic1">Article Main Image :
+                <input type="file" name="pic1" id="pic1"></label>
+                <label for="pic2">First side Image :
+                <input type="file" name="pic2" id="pic2"></label>
+                <label for="pic3">Seconde side Image :
+                <input type="file" name="pic3" id="pic3"></label>
+                <label for="pic4">Third side Image :
+                <input type="file" name="pic4" id="pic4"></label>
+            </div>
+            <input type="submit" value="Add">
+
+        </form>
     </div>
 
     <script src="../Js/app.js"></script>
