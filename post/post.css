@@ -1,0 +1,25 @@
+.postContainer .article {
+    display: flex;
+}
+
+.postContainer .leftSide {
+    width: 40%;
+    margin: 10px;
+}
+
+.postContainer .leftSide img:first-child {
+    width: 550px;
+    height: 450px;
+}
+
+.postContainer .leftSide img {
+    width: 180px;
+    height: 100px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),
+                0 5px 12px -2px rgba(0, 0, 0, 0.1),
+                0 18px 36px -6px rgba(0, 0, 0, 0.1);
+}
+
+.postContainer .rightSide .discrip p{
+    font-weight: 300;
+}
