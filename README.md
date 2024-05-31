@@ -29,4 +29,4 @@
 
 <p>GuideMe is more than just a website; it's a thriving community of travel enthusiasts. Share your local knowledge, discover fantastic new places, and plan your next adventure with a network of passionate explorers.</p>
 
-<p>**Contribute today and be a part of building the most comprehensive and informative tourist guide for travelers worldwide!**</p>
+<p>Contribute today and be a part of building the most comprehensive and informative tourist guide for travelers worldwide!</p>
