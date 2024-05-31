@@ -1,28 +1,28 @@
-## GuideMe: Your one-stop shop for exploring the Algeria**
+## GuideMe: Your one-stop shop for exploring the Algeria
 
 <p>GuideMe is a dynamic and user-driven tourist guide website built with HTML, CSS, JavaScript, and a robust PHP framework. It empowers you to discover hidden gems and curate unforgettable travel experiences.</p>
 
 ### Become a Local Insider:
 
 <ul>
-  <li>**Contribute Articles:** Share your knowledge and passion for travel by uploading detailed articles about shops, parks, historical sites, restaurants, or any place you think travelers would love. </li>
-  <li>**Enrich Content:** Include captivating descriptions, high-quality photos, and insider tips to help others plan their dream vacation. </li>
-  <li>**Build Your Reputation:** Earn recognition within the community as your contributions guide fellow travelers.</li>
+  <li><b>Contribute Articles:</b> Share your knowledge and passion for travel by uploading detailed articles about shops, parks, historical sites, restaurants, or any place you think travelers would love. </li>
+  <li><b>Enrich Content:</b> Include captivating descriptions, high-quality photos, and insider tips to help others plan their dream vacation. </li>
+  <li><b>Build Your Reputation:</b> Earn recognition within the community as your contributions guide fellow travelers.</li>
 </ul>
 
 ### Explore Like a Pro:
 
 <ul>
-  <li>**Vast User-Generated Content:**  Browse a comprehensive library of user-generated content, categorized for easy navigation and filtering based on location, interests, and travel style. </li>
-  <li>**Discover Unique Experiences:** Find hidden gems and adventure beyond the usual tourist spots. Craft an itinerary that reflects your passions, from historical exploration to culinary delights. </li>
-  <li>**Detailed Information:** Access essential details for every location, including address, opening hours, accessibility information, and user reviews. </li>
+  <li><b>Vast User-Generated Content:</b>  Browse a comprehensive library of user-generated content, categorized for easy navigation and filtering based on location, interests, and travel style. </li>
+  <li><b>Discover Unique Experiences:</b> Find hidden gems and adventure beyond the usual tourist spots. Craft an itinerary that reflects your passions, from historical exploration to culinary delights. </li>
+  <li><b>Detailed Information:</b> Access essential details for every location, including address, opening hours, accessibility information, and user reviews. </li>
 </ul>
 
 ### Powerful Technology Stack:
 
 <ul>
-  <li>**HTML, CSS, and JavaScript:** Ensure a visually stunning, user-friendly, and responsive experience across all devices.</li>
-  <li>**Robust PHP Framework:**  Provides a scalable and secure foundation for content management, user authentication, and search functionalities. </li>
+  <li><b>HTML, CSS, and JavaScript:</b> Ensure a visually stunning, user-friendly, and responsive experience across all devices.</li>
+  <li><b>Robust PHP Framework:</b>  Provides a scalable and secure foundation for content management, user authentication, and search functionalities. </li>
 </ul>
 
 ### Join the Global Community:
