@@ -8,6 +8,7 @@
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <title>GuideMe | Home</title>
   <link rel="stylesheet" href="../css/mainStyle.css">
+  <link rel="stylesheet" href="../css/sideStyle.css">
   <link rel="shortcut icon" href="../items/favicon.png" type="image/png">
 </head>
 
