@@ -22,6 +22,9 @@
 
       <div class="search_bar">
         <input type="text" placeholder="Search" />
+        <div class="searchIcon">
+          <img src="search.png" alt="">
+        </div>
       </div>
 
       <div class="navbar_content">
