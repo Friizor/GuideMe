@@ -51,6 +51,9 @@ $res = mysqli_query($con, $sqlPost);
 
       <div class="search_bar">
         <input type="text" placeholder="Search" />
+        <div class="searchIcon">
+          <img src="search.png" alt="">
+        </div>
       </div>
 
       <div class="navbar_content">
@@ -179,18 +182,18 @@ $res = mysqli_query($con, $sqlPost);
 
 
     <div class="card-list">
-      <?php
-      while ($don = mysqli_fetch_assoc($res)) { ?>
-        <!-- item starting  -->
-        <div class="trend">
-          <div class="trendImg">
-            <img src="../upload/postImages/<?php echo $don['mainPic'] ?>">
-            <div class="upp"></div>
-          </div>
-          <div class="trendInfo">
-            <h3><?php echo $don['title'] ?></h3>
-            <div class="ratingContainer">
-              <div class="rating">
+    
+    
+      <!-- item starting  -->
+      <div class="trend">
+    <div class="trendImg">
+        <img src="duplin.jpg"  >
+        <div class="upp"></div>
+    </div>
+    <div class="trendInfo">
+        <h3>Dupling home</h3>
+        <div class="ratingContainer">
+            <div class="rating">
                 <img src="yellowstar.png" alt="yellowstar" />
                 <img src="yellowstar.png" alt="yellowstar" />
                 <img src="yellowstar.png" alt="yellowstar" />
@@ -210,7 +213,7 @@ $res = mysqli_query($con, $sqlPost);
           </div>
         </div>
       <?php
-      }
+      } 
       ?>
 
 

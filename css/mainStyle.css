@@ -80,18 +80,37 @@ body {
   height: 47px;
   max-width: 430px;
   width: 100%;
+  display: flex;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .search_bar input {
   height: 100%;
   width: 100%;
-  border-radius: 25px;
+  border-radius: 4px;
   font-size: 18px;
   outline: none;
-  background-color: var(--white-color);
+  border: none;
+
+  background-color:#fff;
   color: var(--grey-color);
-  border: 1px solid var(--grey-color-light);
+  /* border: 1px solid var(--grey-color-light); */
   padding: 0 20px;
+  
+}
+
+.searchIcon {
+  background-color: var(--blue-color);
+  border-radius: 0px 5px 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+.searchIcon img {
+    width: 30px;
+    height: 30px;
 }
 
 .navbar_content {
@@ -315,15 +334,19 @@ body {
 .category-container {
   list-style: none;
   display: flex;
-  border-bottom: 1px solid #aaa;
-  display: flex;
-  justify-content: center;
+  border-bottom: 1px solid rgba(177, 168, 168, 0.2) ;
+
+ 
 }
 
 .category {
-  margin-right: 20px;
+    padding: 13px 24px;
+
 }
 
+.category:hover {
+    background-color: #f3f3f3;
+}
 .category-container a {
   text-decoration: none;
   color: #707070;
@@ -652,3 +675,116 @@ hr {
 /* Fuck Me */
 
 /* item css design */
+.trend {
+  height: fit-content;
+  width: 300px;
+
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 5px 15px 0 15px;
+  margin-right: 5px;
+  display: flex;
+  padding: 16px 10px 32px 10px;
+  border-radius: 3px;
+  z-index: 0;
+
+  flex-direction: column;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  align-items: center;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.trend:hover {
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.trendImg img {
+  height: 260px;
+  width: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+
+}
+.trendInfo {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  width: 200px;
+
+  width: 250px;
+}
+.trendInfo h3 {
+  font-size: 19px;
+  margin: 0px 0px 8px 0;
+
+}
+
+.trendInfo .trendWilaya {
+  color: rgb(140, 140, 140);
+  font-size: 13px;
+  margin:0 0 8px 0;
+  background-color: transparent;
+  padding: 0;
+}
+
+.ratingContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+
+.ratingContainer .ratingSpan {
+  margin:0 0 0 3px;
+  color: rgb(140, 140, 140);
+ background-color: transparent;
+  font-size: 11px;
+  padding: 0;
+}
+.rating {
+  display: flex;
+  width: 105px;
+  justify-content: space-between;
+  margin-right: 5px;
+}
+
+
+
+.rating img {
+  height: 19px;
+  width: 19px;
+}
+
+
+.trendInfo .open {
+  font-size: 14px;
+  font-weight: 700;
+  color: #32cd32;
+  margin:0 5px 0 0;
+  background-color: transparent;
+  padding: 0;
+  
+}
+
+.closed {
+  color: red;
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 5px;
+  margin:0 5px 0 0;
+  background-color: transparent;
+  padding: 0;
+}
+
+
+.closingDiv {
+  display: flex;
+  
+}
+.closingDiv p {
+  margin: 0;
+  font-size: 14px;
+}
