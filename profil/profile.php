@@ -21,6 +21,12 @@ if ($email != false && $password != false) {
 } else {
     header('Location: ../system/login-user.php');
 }
+
+$idUser = $fetch_info['idUser'];
+
+$sql = "SELECT * FROM posttable WHERE idUser = '$idUser'";
+
+$rep = mysqli_query($con, $sql);
 ?>
 
 
@@ -34,6 +40,7 @@ if ($email != false && $password != false) {
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <title>GuideMe | Profile</title>
     <link rel="stylesheet" href="../css/mainStyle.css">
+    <link rel="stylesheet" href="style.css">
 
     <link rel="shortcut icon" href="../items/favicon.png" type="image/png">
 
@@ -84,10 +91,10 @@ if ($email != false && $password != false) {
                         </div>
 
                         <ul class="menu_items submenu">
-                            <a href="#" class="nav_link sublink">Boumerdes</a>
-                            <a href="#" class="nav_link sublink">Alger</a>
-                            <a href="#" class="nav_link sublink">Setif</a>
-                            <a href="#" class="nav_link sublink">Tipaza</a>
+                            <a href="../app/app.php?act=Boumerdes" class="nav_link sublink">Boumerdes</a>
+                            <a href="../app/app.php?act=Alger" class="nav_link sublink">Alger</a>
+                            <a href="../app/app.php?act=Setif" class="nav_link sublink">Setif</a>
+                            <a href="../app/app.php?act=Tipaza" class="nav_link sublink">Tipaza</a>
                         </ul>
                     </li>
                 </ul>
@@ -104,10 +111,11 @@ if ($email != false && $password != false) {
                         </div>
 
                         <ul class="menu_items submenu">
-                            <a href="app.php?act=boumerdes" class="nav_link sublink">Boumerdes</a>
-                            <a href="app.php?act=alger" class="nav_link sublink">Alger</a>
-                            <a href="app.php?act=setif" class="nav_link sublink">Setif</a>
-                            <a href="app.php?act=tipaza" class="nav_link sublink">Tipaza</a>
+                            <a href="../app/app.php?cat=Restaurants" class="nav_link sublink">Restaurants</a>
+                            <a href="../app/app.php?cat=Cosmetics" class="nav_link sublink">Cosmetics</a>
+                            <a href="../app/app.php?cat=Clothing" class="nav_link sublink">Clothing</a>
+                            <a href="../app/app.php?cat=Grocery" class="nav_link sublink">Grocery Stores</a>
+                            <a href="#" class="nav_link sublink">Sell All Category</a>
                         </ul>
                     </li>
                     <li class="item">
@@ -182,19 +190,31 @@ if ($email != false && $password != false) {
             </div>
         </div>
         <hr>
-        <div class="edit_profil">
-            <div class="edit_title">
-                <h1>Edit profile </h1>
-            </div>
-            <form action="#" method="post">
-                <label for="username">Userename :</label>
-                <input type="text" name="username" id="username" value="" placeholder="username...">
-                <label for="email">Email :</label>
-                <input type="email" name="email" id="email" value="" placeholder="email..."><br><br>
-                <label for="pdp">Edit Profile Picture :</label>
-                <input type="file" name="pdp" id="pdp"><br><br>
-                <input type="submit" value="Edit">
-            </form>
+        <h4><i>My Posts</i></h4>
+        <div class="postContent">
+            <?php
+            while ($don = mysqli_fetch_assoc($rep)) { ?>
+                <a href="../post/post.php?idPost=<?php echo $don['idPost'] ?>">
+                    <div class="userPost">
+
+                        <div class="postProfil">
+                            <img src="../upload/postImages/<?php echo $don['mainPic'] ?>" alt="Post Image">
+                        </div>
+                        <div class="title">
+                            <h4><?php echo $don['title'] ?></h4>
+                            <span><?php echo $don['wilaya'] ?></span><br>
+                            <a href="sup.php?idPost=<?php echo $don['idPost'] ?>">
+                                <i class='bx bx-trash' style='color:#ff0000'></i>
+                            </a>
+                            <a href="edit.php?idPOst=<?php echo $don['idPost'] ?>">
+                                <i class='bx bx-edit-alt' style='color:#41ff20'></i>
+                            </a>
+                        </div>
+                    </div>
+                </a>
+            <?php
+            }
+            ?>
         </div>
     </div>
 

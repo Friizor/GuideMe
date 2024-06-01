@@ -1,0 +1,47 @@
+.postContent {
+    display: flex;
+    flex-wrap: wrap;
+}
+.postContent a {
+    text-decoration: none;
+    color: #000;
+}
+
+.userPost {
+    display: flex;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.userPost:hover {
+    box-shadow: 0 1px 10px rgb(0, 0, 0);
+}
+
+.postProfil img {
+    width: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 8px;
+}
+
+.userPost .title h4 {
+    font-weight: 500;
+}
+
+.userPost .title span {
+    color: #8c8c8c;
+    font-weight: 900;
+}
+
+.userPost .title a {
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.userPost .title a i {
+    font-size: 40px;
+}

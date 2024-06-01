@@ -38,8 +38,6 @@ $don = mysqli_fetch_assoc($rep);
 </head>
 
 <!-- this page is not responsive yet -->
-
-<>
   <header>
     <nav class="navbar px-3">
       <div class="logo_item">

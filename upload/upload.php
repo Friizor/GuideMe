@@ -83,10 +83,10 @@ if ($email != false && $password != false) {
                         </div>
 
                         <ul class="menu_items submenu">
-                            <a href="app.php?act=boumerdes" class="nav_link sublink">Boumerdes</a>
-                            <a href="app.php?act=alger" class="nav_link sublink">Alger</a>
-                            <a href="app.php?act=setif" class="nav_link sublink">Setif</a>
-                            <a href="app.php?act=tipaza" class="nav_link sublink">Tipaza</a>
+                            <a href="../app/app.php?act=Boumerdes" class="nav_link sublink">Boumerdes</a>
+                            <a href="../app/app.php?act=Alger" class="nav_link sublink">Alger</a>
+                            <a href="../app/app.php?act=Setif" class="nav_link sublink">Setif</a>
+                            <a href="../app/app.php?act=Tipaza" class="nav_link sublink">Tipaza</a>
                         </ul>
                     </li>
                 </ul>
@@ -103,10 +103,10 @@ if ($email != false && $password != false) {
                         </div>
 
                         <ul class="menu_items submenu">
-                            <a href="#" class="nav_link sublink">Restaurants</a>
-                            <a href="#" class="nav_link sublink">Cosmetics</a>
-                            <a href="#" class="nav_link sublink">Clothing</a>
-                            <a href="#" class="nav_link sublink">Grocery Stores</a>
+                            <a href="../app/app.php?cat=Restaurants" class="nav_link sublink">Restaurants</a>
+                            <a href="../app/app.php?cat=Cosmetics" class="nav_link sublink">Cosmetics</a>
+                            <a href="../app/app.php?cat=Clothing" class="nav_link sublink">Clothing</a>
+                            <a href="../app/app.php?cat=Grocery" class="nav_link sublink">Grocery Stores</a>
                             <a href="#" class="nav_link sublink">Sell All Category</a>
                         </ul>
                     </li>

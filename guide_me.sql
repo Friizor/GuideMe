@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : sam. 01 juin 2024 à 14:34
+-- Généré le : dim. 02 juin 2024 à 00:39
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -48,8 +48,10 @@ CREATE TABLE `posttable` (
 --
 
 INSERT INTO `posttable` (`idUser`, `idPost`, `title`, `description`, `wilaya`, `category`, `phoneNumber`, `emailAddress`, `address`, `mainPic`, `sidePic1`, `sidePic2`, `sidePic3`) VALUES
-('ec0656ae32', '1717241293954409', 'popins', 'best pizza in boumerdes', 'Boumerdes', 'Restaurants', 551762190, 'yijoyig234@infqq.com', 'Rue 250 logement bâtiment 24 n3', 'pexels-thomas-balabaud-735585-1579739.jpg', 'pexels-evonics-1058277.jpg', 'pexels-caio-64613.jpg', 'pexels-life-of-pix-67468.jpg'),
-('ec0656ae32', '1717243751592282', 'Glaxy Shop', 'the best engridaint', 'Alger', 'Grocery', 551762121, 'sexab31489@lutota.com', 'Rue 250 logement bâtiment 24 n3', 'pexels-caio-64613.jpg', 'pexels-pixabay-264636.jpg', 'pexels-nc-farm-bureau-mark-2255903.jpg', 'pexels-shvetsa-3962285.jpg');
+('ec0656ae32', '1717280747502407', 'Hot Pot', 'Best Pizza in the world', 'Alger', 'Restaurants', 512412812, 'hotpot@gmail.com', 'Rue hassiba bâtiment 24 n3', 'rest (1).jpg', 'rest (3).jpg', 'rest (2).jpg', 'rest (4).jpg'),
+('ec0656ae32', '1717280877248832', 'Polana', 'Are you looking for the perfect one? – You will find it here.', 'Setif', 'Clothing', 551762190, 'polana@gmail.com', 'Rue Elma Block 14 N 4', 'clothe (1).jpg', 'clothe (3).jpg', 'clothe (2).jpg', 'clothe (4).jpg'),
+('ec0656ae32', '1717280988059778', 'SidaAli Cosmok', 'Better Product For Bette Exprience', 'Alger', 'Cosmetics', 761787190, 'sidoucos@gmail.com', 'Rue cadix N23', 'cosmetics (2).jpg', 'cosmetics (3).jpg', 'cosmetics (1).jpg', 'cosmetics (4).jpg'),
+('ec0656ae32', '1717281379091461', 'Galaxy', 'Better organique Food = better health', 'Boumerdes', 'Grocery', 621432543, 'galaxy@gmail.com', 'Rue 250 logement bâtiment 24 n3', 'grocery.jpg', 'grocery3.jpg', 'grocery2.jpg', 'grocery4.jpg');
 
 -- --------------------------------------------------------
 
