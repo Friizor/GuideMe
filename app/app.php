@@ -155,7 +155,7 @@
     
     
       <!-- item starting  -->
-      <div class="trend">
+      <div onclick="window.location.href='../post/post.html'" class="trend">
     <div class="trendImg">
         <img src="duplin.jpg"  >
         <div class="upp"></div>
