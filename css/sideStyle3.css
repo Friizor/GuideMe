@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   max-width: 1250px;
   margin: 30px auto;
-  gap: 50px;
+  gap: 15px;
 }
 .trend {
     height: fit-content;
