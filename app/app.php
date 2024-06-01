@@ -183,23 +183,25 @@ $res = mysqli_query($con, $sqlPost);
 
     <div class="card-list">
     
+      <?php
+          while($don = mysqli_fetch_assoc($res)){ ?>
+
     
       <!-- item starting  -->
-      <div class="trend">
-    <div class="trendImg">
-        <img src="duplin.jpg"  >
-        <div class="upp"></div>
-    </div>
-    <div class="trendInfo">
-        <h3>Dupling home</h3>
-        <div class="ratingContainer">
-            <div class="rating">
+        <div class="trend">
+          <div class="trendImg">
+            <img src="../upload/postImages/<?php echo $don['mainPic'] ?>"  >
+            <div class="upp"></div>
+          </div>
+          <div class="trendInfo">
+            <h3><?php echo $don['title'] ?></h3>
+            <div class="ratingContainer">
+              <div class="rating">
                 <img src="yellowstar.png" alt="yellowstar" />
                 <img src="yellowstar.png" alt="yellowstar" />
                 <img src="yellowstar.png" alt="yellowstar" />
                 <img src="yellowstar.png" alt="yellowstar" />
                 <img src="yellowstar.png" alt="yellowstar" />
-
               </div>
               <b>4.9</b> <span class="ratingSpan">718 Reviews</span>
             </div>
@@ -212,13 +214,9 @@ $res = mysqli_query($con, $sqlPost);
             </div>
           </div>
         </div>
-      <?php
-      } 
-      ?>
-
-
-
-
+        <?php
+          }
+        ?>
 
     </div>
   </div>
