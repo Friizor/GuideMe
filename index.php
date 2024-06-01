@@ -17,7 +17,7 @@
             <a class="logo" href="#">Guide<span>Me.</span></a>
             <ul class="menu-links">
                 <span id="close-menu-btn" class="material-symbols-outlined">close</span>
-                <li><a href="app/app.php">Home</a></li>
+                <li><a href="app/app.php?act=all">Home</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#footer">Service</a></li>
                 <li><a href="#about">About us</a></li>
@@ -33,7 +33,7 @@
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam natus suscipit commodi adipisci est modi quas laudantium recusandae odio ullam quasi tenetur eos.
             </p>
-            <a href="app/app.php"><button>Get Started</button></a>
+            <a href="app/app.php?act=all"><button>Get Started</button></a>
         </div>
     </section>
     <div class="allemail" id="about">

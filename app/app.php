@@ -1,3 +1,31 @@
+<?php
+require "../system/dataControlle.php";
+
+
+
+if (isset($_GET['act'])) {
+  $actionplace = $_GET['act'];
+} else {
+  $actionplace = 'all';
+}
+
+$sqlPost = "";
+
+if ($actionplace == 'all') {
+  $sqlPost = "SELECT * FROM posttable";
+} elseif ($actionplace == 'Boumerdes') {
+  $sqlPost = "SELECT * FROM posttable WHERE wilaya = '$actionplace'";
+} elseif ($actionplace == 'Alger') {
+  $sqlPost = "SELECT * FROM posttable WHERE wilaya = '$actionplace'";
+} elseif ($actionplace == 'Tipaza') {
+  $sqlPost = "SELECT * FROM posttable WHERE wilaya = '$actionplace'";
+} elseif ($actionplace == 'Setif') {
+  $sqlPost = "SELECT * FROM posttable WHERE wilaya = '$actionplace'";
+}
+
+$res = mysqli_query($con, $sqlPost);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +36,7 @@
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <title>GuideMe | Home</title>
   <link rel="stylesheet" href="../css/mainStyle.css">
-  <link rel="stylesheet" href="../css/sideStyle.css">
+  <link rel="stylesheet" href="../css/sideStyle2.css">
   <link rel="shortcut icon" href="../items/favicon.png" type="image/png">
 </head>
 
@@ -38,7 +66,7 @@
         <ul class="menu_items">
           <div class="menu_title menu_dahsboard"></div>
           <li class="item">
-            <a href="../app/app.html" class="nav_link">
+            <a href="../app/app.php" class="nav_link">
               <span class="navlink_icon">
                 <i class="bx bx-home-alt"></i>
               </span>
@@ -55,10 +83,10 @@
             </div>
 
             <ul class="menu_items submenu">
-              <a href="#" class="nav_link sublink">Boumerdes</a>
-              <a href="#" class="nav_link sublink">Alger</a>
-              <a href="#" class="nav_link sublink">Setif</a>
-              <a href="#" class="nav_link sublink">Tipaza</a>
+              <a href="app.php?act=Boumerdes" class="nav_link sublink">Boumerdes</a>
+              <a href="app.php?act=Alger" class="nav_link sublink">Alger</a>
+              <a href="app.php?act=Setif" class="nav_link sublink">Setif</a>
+              <a href="app.php?act=Tipaza" class="nav_link sublink">Tipaza</a>
             </ul>
           </li>
         </ul>
@@ -149,182 +177,44 @@
       </a>
     </ul>
 
+
     <div class="card-list">
-    
-    
-      <!-- item starting  -->
-      <div class="trend">
-    <div class="trendImg">
-        <img src="duplin.jpg"  >
-        <div class="upp"></div>
-    </div>
-    <div class="trendInfo">
-        <h3>Dupling home</h3>
-        <div class="ratingContainer">
-            <div class="rating">
+      <?php
+      while ($don = mysqli_fetch_assoc($res)) { ?>
+        <!-- item starting  -->
+        <div class="trend">
+          <div class="trendImg">
+            <img src="../upload/postImages/<?php echo $don['mainPic'] ?>">
+            <div class="upp"></div>
+          </div>
+          <div class="trendInfo">
+            <h3><?php echo $don['title'] ?></h3>
+            <div class="ratingContainer">
+              <div class="rating">
                 <img src="yellowstar.png" alt="yellowstar" />
                 <img src="yellowstar.png" alt="yellowstar" />
                 <img src="yellowstar.png" alt="yellowstar" />
                 <img src="yellowstar.png" alt="yellowstar" />
                 <img src="yellowstar.png" alt="yellowstar" />
-               
-            </div>
-            <b>4.9</b> <span class="ratingSpan">718 Reviews</span>
-        </div>
-        <span class="trendWilaya">Boumerdes</span>
-        <div class="closingDiv">
-            <span class="open">
-                Open
-            </span>
-            <p>Until 5:30 PM</p>
-        </div>
-    </div>
-</div>
 
-      <!-- item starting  -->
-      <div class="trend">
-    <div class="trendImg">
-        <img src="duplin.jpg"  >
-        <div class="upp"></div>
-    </div>
-    <div class="trendInfo">
-        <h3>Dupling home</h3>
-        <div class="ratingContainer">
-            <div class="rating">
-                <img src="yellowstar.png" alt="yellowstar" />
-                <img src="yellowstar.png" alt="yellowstar" />
-                <img src="yellowstar.png" alt="yellowstar" />
-                <img src="yellowstar.png" alt="yellowstar" />
-                <img src="yellowstar.png" alt="yellowstar" />
-               
+              </div>
+              <b>4.9</b> <span class="ratingSpan">718 Reviews</span>
             </div>
-            <b>4.9</b> <span class="ratingSpan">718 Reviews</span>
-        </div>
-        <span class="trendWilaya">Boumerdes</span>
-        <div class="closingDiv">
-            <span class="open">
+            <span class="trendWilaya"><?php echo $don['wilaya'] ?></span>
+            <div class="closingDiv">
+              <span class="open">
                 Open
-            </span>
-            <p>Until 5:30 PM</p>
+              </span>
+              <p>Until 5:30 PM</p>
+            </div>
+          </div>
         </div>
-    </div>
-</div>
+      <?php
+      }
+      ?>
 
-      <!-- item starting  -->
-      <div class="trend">
-    <div class="trendImg">
-        <img src="duplin.jpg"  >
-        <div class="upp"></div>
-    </div>
-    <div class="trendInfo">
-        <h3>Dupling home</h3>
-        <div class="ratingContainer">
-            <div class="rating">
-                <img src="yellowstar.png" alt="yellowstar" />
-                <img src="yellowstar.png" alt="yellowstar" />
-                <img src="yellowstar.png" alt="yellowstar" />
-                <img src="yellowstar.png" alt="yellowstar" />
-                <img src="yellowstar.png" alt="yellowstar" />
-               
-            </div>
-            <b>4.9</b> <span class="ratingSpan">718 Reviews</span>
-        </div>
-        <span class="trendWilaya">Boumerdes</span>
-        <div class="closingDiv">
-            <span class="open">
-                Open
-            </span>
-            <p>Until 5:30 PM</p>
-        </div>
-    </div>
-</div>
 
-      <!-- item starting  -->
-      <div class="trend">
-    <div class="trendImg">
-        <img src="duplin.jpg"  >
-        <div class="upp"></div>
-    </div>
-    <div class="trendInfo">
-        <h3>Dupling home</h3>
-        <div class="ratingContainer">
-            <div class="rating">
-                <img src="yellowstar.png" alt="yellowstar" />
-                <img src="yellowstar.png" alt="yellowstar" />
-                <img src="yellowstar.png" alt="yellowstar" />
-                <img src="yellowstar.png" alt="yellowstar" />
-                <img src="yellowstar.png" alt="yellowstar" />
-               
-            </div>
-            <b>4.9</b> <span class="ratingSpan">718 Reviews</span>
-        </div>
-        <span class="trendWilaya">Boumerdes</span>
-        <div class="closingDiv">
-            <span class="open">
-                Open
-            </span>
-            <p>Until 5:30 PM</p>
-        </div>
-    </div>
-</div>
 
-      <!-- item starting  -->
-      <div class="trend">
-    <div class="trendImg">
-        <img src="duplin.jpg"  >
-        <div class="upp"></div>
-    </div>
-    <div class="trendInfo">
-        <h3>Dupling home</h3>
-        <div class="ratingContainer">
-            <div class="rating">
-                <img src="yellowstar.png" alt="yellowstar" />
-                <img src="yellowstar.png" alt="yellowstar" />
-                <img src="yellowstar.png" alt="yellowstar" />
-                <img src="yellowstar.png" alt="yellowstar" />
-                <img src="yellowstar.png" alt="yellowstar" />
-               
-            </div>
-            <b>4.9</b> <span class="ratingSpan">718 Reviews</span>
-        </div>
-        <span class="trendWilaya">Boumerdes</span>
-        <div class="closingDiv">
-            <span class="open">
-                Open
-            </span>
-            <p>Until 5:30 PM</p>
-        </div>
-    </div>
-</div>
-
-      <!-- item starting  -->
-      <div class="trend">
-    <div class="trendImg">
-        <img src="duplin.jpg"  >
-        <div class="upp"></div>
-    </div>
-    <div class="trendInfo">
-        <h3>Dupling home</h3>
-        <div class="ratingContainer">
-            <div class="rating">
-                <img src="yellowstar.png" alt="yellowstar" />
-                <img src="yellowstar.png" alt="yellowstar" />
-                <img src="yellowstar.png" alt="yellowstar" />
-                <img src="yellowstar.png" alt="yellowstar" />
-                <img src="yellowstar.png" alt="yellowstar" />
-               
-            </div>
-            <b>4.9</b> <span class="ratingSpan">718 Reviews</span>
-        </div>
-        <span class="trendWilaya">Boumerdes</span>
-        <div class="closingDiv">
-            <span class="open">
-                Open
-            </span>
-            <p>Until 5:30 PM</p>
-        </div>
-    </div>
-</div>
 
 
     </div>

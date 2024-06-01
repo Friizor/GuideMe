@@ -104,11 +104,10 @@ if ($email != false && $password != false) {
                         </div>
 
                         <ul class="menu_items submenu">
-                            <a href="#" class="nav_link sublink">Restaurants</a>
-                            <a href="#" class="nav_link sublink">Cosmetics</a>
-                            <a href="#" class="nav_link sublink">Clothing</a>
-                            <a href="#" class="nav_link sublink">Grocery Stores</a>
-                            <a href="#" class="nav_link sublink">Sell All Category</a>
+                            <a href="app.php?act=boumerdes" class="nav_link sublink">Boumerdes</a>
+                            <a href="app.php?act=alger" class="nav_link sublink">Alger</a>
+                            <a href="app.php?act=setif" class="nav_link sublink">Setif</a>
+                            <a href="app.php?act=tipaza" class="nav_link sublink">Tipaza</a>
                         </ul>
                     </li>
                     <li class="item">

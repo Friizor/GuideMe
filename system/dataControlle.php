@@ -61,25 +61,25 @@ if (isset($_POST['signup'])) {
 
         $code = rand(999999, 111111);
         $status = "notverified";
-        $insert_data = "INSERT INTO usertable (id, name, email, password, code, status)
+        $insert_data = "INSERT INTO usertable (idUser, name, email, password, code, status)
                         values('$uniqueID', '$name', '$email', '$encpass', '$code', '$status')";
         $data_check = mysqli_query($con, $insert_data);
-        if($data_check){
+        if ($data_check) {
             $subject = "Email Verification Code";
             $message = "Your verification code is $code";
             $sender = "Guide-Me";
-            $sender_mail = "Guide-Me";
-            if(mail($email, $subject, $message, "From: $sender <$sender_mail>")){
+            $sender_mail = "zaidimoahmed@gmail.com";
+            if (mail($email, $subject, $message, "From: $sender <$sender_mail>")) {
                 $info = "We've sent a verification code to your email - $email";
                 $_SESSION['info'] = $info;
                 $_SESSION['email'] = $email;
                 $_SESSION['password'] = $password;
                 header('location: user-otp.php');
                 exit();
-            }else{
+            } else {
                 $errors['otp-error'] = "Failed while sending code!";
             }
-        }else{
+        } else {
             $errors['db-error'] = "Failed while inserting data into database!";
         }
     }
@@ -153,9 +153,9 @@ if (isset($_POST['check-email'])) {
         if ($run_query) {
             $subject = "Password Reset Code";
             $message = "Your password reset code is $code";
-            $sender = "From : zaidimoahmed@gmail.com";
-            //$sender_name = "Guide-Me";
-            if (mail($email, $subject, $message, $sender)) {
+            $sender = "Guide-Me";
+            $sender_mail = "zaidimoahmed@gmail.com";
+            if (mail($email, $subject, $message, "From: $sender <$sender_mail>")) {
                 $info = "We've sent a passwrod reset otp to your email - $email";
                 $_SESSION['info'] = $info;
                 $_SESSION['email'] = $email;

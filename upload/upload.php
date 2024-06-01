@@ -1,26 +1,26 @@
-<!-- <?php 
-require_once ("../system/dataControlle.php"); 
+<?php
+require_once("../system/dataControlle.php");
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
-if($email != false && $password != false){
+if ($email != false && $password != false) {
     $sql = "SELECT * FROM usertable WHERE email = '$email'";
     $run_Sql = mysqli_query($con, $sql);
-    if($run_Sql){
+    if ($run_Sql) {
         $fetch_info = mysqli_fetch_assoc($run_Sql);
         $status = $fetch_info['status'];
         $code = $fetch_info['code'];
-        if($status == "verified"){
-            if($code != 0){
+        if ($status == "verified") {
+            if ($code != 0) {
                 header('Location: ../system/reset-code.php');
             }
-        }else{
+        } else {
             header('Location: ../system/user-otp.php');
         }
     }
-}else{
+} else {
     header('Location: ../system/login-user.php');
 }
-?> -->
+?>
 
 
 <!DOCTYPE html>
@@ -83,10 +83,10 @@ if($email != false && $password != false){
                         </div>
 
                         <ul class="menu_items submenu">
-                            <a href="#" class="nav_link sublink">Boumerdes</a>
-                            <a href="#" class="nav_link sublink">Alger</a>
-                            <a href="#" class="nav_link sublink">Setif</a>
-                            <a href="#" class="nav_link sublink">Tipaza</a>
+                            <a href="app.php?act=boumerdes" class="nav_link sublink">Boumerdes</a>
+                            <a href="app.php?act=alger" class="nav_link sublink">Alger</a>
+                            <a href="app.php?act=setif" class="nav_link sublink">Setif</a>
+                            <a href="app.php?act=tipaza" class="nav_link sublink">Tipaza</a>
                         </ul>
                     </li>
                 </ul>
@@ -164,7 +164,7 @@ if($email != false && $password != false){
     <div class="container">
         <div class="postUpload">
             <h2>Add Article</h2>
-            <form action="#" method="post">
+            <form action="articleAdd.php" method="post" enctype="multipart/form-data">
                 <div class="postForm">
                     <div class="postInfo">
                         <label for="title">Title</label>
@@ -174,7 +174,7 @@ if($email != false && $password != false){
                         <div class="option">
                             <label for="Wil">Wilayas</label>
                             <select name="Wilayas" id="Wil" class="postSelect">
-                                <option value="Boumerder">Boumerder</option>
+                                <option value="Boumerder">Boumerdes</option>
                                 <option value="Alger">Alger</option>
                                 <option value="Setif">Setif</option>
                                 <option value="Tipaza">Tipaza</option>
@@ -194,31 +194,43 @@ if($email != false && $password != false){
                         <label for="email">Email Address</label>
                         <input type="email" name="email" id="email" placeholder="contact email..." required>
                         <label for="address">Address</label>
-                        <input type="text" name="address" id="address" placeholder="Please enter a google map link..."
-                            required>
-                        </div>
+                        <input type="text" name="address" id="address" placeholder="Please enter a google map link..." required>
                     </div>
-                    <div class="postimg">
-                        <div class="sideImgDiv">
-                            <label for="mainImg">Main Picture</label>
-                            <input type="file" name="mainImg" id="mainImg" required>
-                            <label for="sidePic">Side Picture</label>
-                            <input type="file" name="sidebar" id="sidebar" required>
-                        </div>
-                        <div>
-                            <label for="sidePic2">Side Picture</label>
-                            <input type="file" name="sidebar2" id="sidebar2" required>
-                            <label for="sidePic3">Side Picture</label>
-                            <input type="file" name="sidebar3" id="sidebar3" required>
-                        </div>
+                </div>
+                <div class="postimg">
+                    <div class="sideImgDiv">
+                        <label for="mainImg">Main Picture</label>
+                        <input type="file" name="mainImg" id="mainImg" required>
+                        <label for="sidePic">Side Picture</label>
+                        <input type="file" name="sidebar" id="sidebar" required>
                     </div>
-                    
-                    <input type="submit" name="submit" id="submit" value="Add">
+                    <div>
+                        <label for="sidePic2">Side Picture</label>
+                        <input type="file" name="sidebar2" id="sidebar2" required>
+                        <label for="sidePic3">Side Picture</label>
+                        <input type="file" name="sidebar3" id="sidebar3" required>
+                    </div>
+                </div>
+
+                <input type="submit" name="submit" id="submit" value="Add">
             </form>
         </div>
     </div>
 
     <script src="../Js/app.js"></script>
+    <script>
+        const inputField = document.getElementById("phone"); // Replace "yourInputId" with the actual ID of your input field
+
+        inputField.addEventListener("input", function() {
+            // Limit the input length to 10 characters
+            if (this.value.length > 10) {
+                this.value = this.value.slice(0, 10);
+            }
+
+            // Allow only numbers (including negative sign)
+            this.value = this.value.replace(/[^0-9-]/g, "");
+        });
+    </script>
 </body>
 
 </html>
