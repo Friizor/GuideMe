@@ -22,6 +22,9 @@
 
       <div class="search_bar">
         <input type="text" placeholder="Search" />
+        <div class="searchIcon">
+          <img src="search.png" alt="">
+        </div>
       </div>
 
       <div class="navbar_content">
@@ -152,7 +155,7 @@
     
     
       <!-- item starting  -->
-      <div class="trend">
+      <div onclick="window.location.href='../post/post.html'" class="trend">
     <div class="trendImg">
         <img src="duplin.jpg"  >
         <div class="upp"></div>
