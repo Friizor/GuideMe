@@ -1,7 +1,12 @@
 .card-list {
-  gap: 80px;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); */
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1250px;
+  margin: 30px auto;
+  gap: 50px;
 }
-
 .trend {
     height: fit-content;
     width: 300px;
