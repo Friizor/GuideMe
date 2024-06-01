@@ -149,62 +149,183 @@
     </ul>
 
     <div class="card-list">
-      <a href="../post/post.html" class="card-item">
-        <img src="kiosk.jpg" alt="Card Image">
-        <span class="designer">Cosmetics</span>
-        <h3>Sid Ali Cosmetics for best product.</h3>
-        <div class="arrow">
-          <i class="fas fa-arrow-right card-icon"></i>
+    
+    
+      <!-- item starting  -->
+      <div class="trend">
+    <div class="trendImg">
+        <img src="duplin.jpg"  >
+        <div class="upp"></div>
+    </div>
+    <div class="trendInfo">
+        <h3>Dupling home</h3>
+        <div class="ratingContainer">
+            <div class="rating">
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+               
+            </div>
+            <b>4.9</b> <span class="ratingSpan">718 Reviews</span>
         </div>
-      </a>
-      <a href="#" class="card-item">
-        <img src="the snug.jpg" alt="Card Image">
-        <span class="designer">Mall</span>
-        <h3>Mohamadia Mall best destination for luxury.</h3>
-        <div class="arrow">
-          <i class="fas fa-arrow-right card-icon"></i>
+        <span class="trendWilaya">Boumerdes</span>
+        <div class="closingDiv">
+            <span class="open">
+                Open
+            </span>
+            <p>Until 5:30 PM</p>
         </div>
-      </a>
-      <a href="#" class="card-item">
-        <img src="the snug.jpg" alt="Card Image">
-        <span class="designer">Restaurants</span>
-        <h3>Shung shop for best adn true ramen in Algeria.</h3>
-        <div class="arrow">
-          <i class="fas fa-arrow-right card-icon"></i>
+    </div>
+</div>
+
+      <!-- item starting  -->
+      <div class="trend">
+    <div class="trendImg">
+        <img src="duplin.jpg"  >
+        <div class="upp"></div>
+    </div>
+    <div class="trendInfo">
+        <h3>Dupling home</h3>
+        <div class="ratingContainer">
+            <div class="rating">
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+               
+            </div>
+            <b>4.9</b> <span class="ratingSpan">718 Reviews</span>
         </div>
-      </a>
-      <a href="#" class="card-item">
-        <img src="the snug.jpg" alt="Card Image">
-        <span class="designer">Restaurants</span>
-        <h3>Shung shop for best adn true ramen in Algeria.</h3>
-        <div class="arrow">
-          <i class="fas fa-arrow-right card-icon"></i>
+        <span class="trendWilaya">Boumerdes</span>
+        <div class="closingDiv">
+            <span class="open">
+                Open
+            </span>
+            <p>Until 5:30 PM</p>
         </div>
-      </a>
-      <a href="#" class="card-item">
-        <img src="the snug.jpg" alt="Card Image">
-        <span class="designer">Restaurants</span>
-        <h3>Shung shop for best adn true ramen in Algeria.</h3>
-        <div class="arrow">
-          <i class="fas fa-arrow-right card-icon"></i>
+    </div>
+</div>
+
+      <!-- item starting  -->
+      <div class="trend">
+    <div class="trendImg">
+        <img src="duplin.jpg"  >
+        <div class="upp"></div>
+    </div>
+    <div class="trendInfo">
+        <h3>Dupling home</h3>
+        <div class="ratingContainer">
+            <div class="rating">
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+               
+            </div>
+            <b>4.9</b> <span class="ratingSpan">718 Reviews</span>
         </div>
-      </a>
-      <a href="#" class="card-item">
-        <img src="the snug.jpg" alt="Card Image">
-        <span class="designer">Restaurants</span>
-        <h3>Shung shop for best adn true ramen in Algeria.</h3>
-        <div class="arrow">
-          <i class="fas fa-arrow-right card-icon"></i>
+        <span class="trendWilaya">Boumerdes</span>
+        <div class="closingDiv">
+            <span class="open">
+                Open
+            </span>
+            <p>Until 5:30 PM</p>
         </div>
-      </a>
-      <a href="#" class="card-item">
-        <img src="the snug.jpg" alt="Card Image">
-        <span class="designer">Restaurants</span>
-        <h3>Shung shop for best adn true ramen in Algeria.</h3>
-        <div class="arrow">
-          <i class="fas fa-arrow-right card-icon"></i>
+    </div>
+</div>
+
+      <!-- item starting  -->
+      <div class="trend">
+    <div class="trendImg">
+        <img src="duplin.jpg"  >
+        <div class="upp"></div>
+    </div>
+    <div class="trendInfo">
+        <h3>Dupling home</h3>
+        <div class="ratingContainer">
+            <div class="rating">
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+               
+            </div>
+            <b>4.9</b> <span class="ratingSpan">718 Reviews</span>
         </div>
-      </a>
+        <span class="trendWilaya">Boumerdes</span>
+        <div class="closingDiv">
+            <span class="open">
+                Open
+            </span>
+            <p>Until 5:30 PM</p>
+        </div>
+    </div>
+</div>
+
+      <!-- item starting  -->
+      <div class="trend">
+    <div class="trendImg">
+        <img src="duplin.jpg"  >
+        <div class="upp"></div>
+    </div>
+    <div class="trendInfo">
+        <h3>Dupling home</h3>
+        <div class="ratingContainer">
+            <div class="rating">
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+               
+            </div>
+            <b>4.9</b> <span class="ratingSpan">718 Reviews</span>
+        </div>
+        <span class="trendWilaya">Boumerdes</span>
+        <div class="closingDiv">
+            <span class="open">
+                Open
+            </span>
+            <p>Until 5:30 PM</p>
+        </div>
+    </div>
+</div>
+
+      <!-- item starting  -->
+      <div class="trend">
+    <div class="trendImg">
+        <img src="duplin.jpg"  >
+        <div class="upp"></div>
+    </div>
+    <div class="trendInfo">
+        <h3>Dupling home</h3>
+        <div class="ratingContainer">
+            <div class="rating">
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+                <img src="yellowstar.png" alt="yellowstar" />
+               
+            </div>
+            <b>4.9</b> <span class="ratingSpan">718 Reviews</span>
+        </div>
+        <span class="trendWilaya">Boumerdes</span>
+        <div class="closingDiv">
+            <span class="open">
+                Open
+            </span>
+            <p>Until 5:30 PM</p>
+        </div>
+    </div>
+</div>
+
+
     </div>
   </div>
 
