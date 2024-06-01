@@ -188,6 +188,7 @@ $res = mysqli_query($con, $sqlPost);
 
     
       <!-- item starting  -->
+      <a href="../post/post.php?idPost=<?php echo $don['idPost']?>" class="postlink">
         <div class="trend">
           <div class="trendImg">
             <img src="../upload/postImages/<?php echo $don['mainPic'] ?>"  >
@@ -214,6 +215,7 @@ $res = mysqli_query($con, $sqlPost);
             </div>
           </div>
         </div>
+        </a>
         <?php
           }
         ?>

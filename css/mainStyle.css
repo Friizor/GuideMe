@@ -599,6 +599,11 @@ hr {
   color: #000;
 }
 
+.postlink {
+  text-decoration: none;
+  color: #676767;
+}
+
 @media (max-width: 1200px) {
   .card-list .card-item {
     padding: 15px;

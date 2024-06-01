@@ -1,3 +1,22 @@
+<?php
+require "../system/dataControlle.php";
+
+$idPost = null;
+
+if (isset($_GET['idPost'])) {
+  $idPost =  $_GET['idPost'];
+} else {
+  header('location: ../app/app.php');
+}
+
+
+$sqlselect = "SELECT * FROM posttable WHERE idPost = '$idPost'";
+$rep = mysqli_query($con, $sqlselect);
+
+$don = mysqli_fetch_assoc($rep);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,11 +64,11 @@
   <div class="postContainer">
     <div class="article">
       <div class="leftSide">
-        <img src="1.jpg" class="mainImg" alt="Article Picture">
+        <img src="../upload/postImages/<?php echo $don['mainPic']?>" class="mainImg" alt="Article Picture">
         <div class="sideImg">
-          <img src="3.jpg" alt="Article Picture">
-          <img src="2.jpg" alt="Article Picture">
-          <img src="4.jpg" alt="Article Picture">
+          <img src="../upload/postImages/<?php echo $don['sidePic1']?>" alt="Article Picture">
+          <img src="../upload/postImages/<?php echo $don['sidePic2']?>" alt="Article Picture">
+          <img src="../upload/postImages/<?php echo $don['sidePic3']?>" alt="Article Picture">
         </div>
 
         <!-- Like reaction -->
@@ -85,7 +104,7 @@
 
 
       <div class="innerInfo">
-        <h1 id="title">Hello brororo jseewew</h1>
+        <h1 id="title"><?php echo $don['title']?></h1>
         <div class="itemRatingContainer">
           <div class="rating">
             <img src="yellowstar.png" alt="yellowstar" />
@@ -102,7 +121,7 @@
           <span class="time">Until 5:30 PM</span>
         </div>
         <p class="innerdescreption">
-          Welcome to [Your Store Name]—your destination for quality [products or services]. Explore our curated
+          Welcome to <?php echo $don['title']?> — your destination for quality [products or services]. Explore our curated
           selection of [highlighted product categories], each handpicked to meet your unique needs. Whether you're
           searching for [specific items] or the latest trends, we have something for everyone.
         </p>
@@ -110,11 +129,15 @@
           <h3>Location and contact</h3>
           <div class="location">
             <img src="location.png" alt="location" />
-            <p class="itemsWilaya">Boumerdes, City Ben Hamouda</p>
+            <p class="itemsWilaya"><?php echo $don['address']?></p>
+          </div>
+          <div class="location">
+            <img src="e-mail.png" alt="location" />
+            <p class="itemsWilaya"><?php echo $don['emailAddress']?></p>
           </div>
           <div class="phone">
             <img src="phone.png" alt="phone" />
-            <p class="itemsWilaya">077896110*</p>
+            <p class="itemsWilaya"><?php echo $don['phoneNumber']?></p>
           </div>
           <b>Price Range</b>
           <span>600 DA - 3900 DA</span>
@@ -159,14 +182,13 @@
                         <a href="https://maps.app.goo.gl/qJnHTErrsV95uTyG8" target="_blank"><i class='bx bx-home-circle'></i>Find Us</a>
                     </div>
                     <div class="comments">
-                        
-                        <!-- <form action="#" method="post">
+                        <form action="#" method="post">
                             <label for="comments"></label>
                             <input type="text" name="comments" id="comments" placeholder="What do you think...">
                         </form> -->
+                    </div>
     </div>
   </div>
-  </div> -->
   </div>
   </div>
 </body>
