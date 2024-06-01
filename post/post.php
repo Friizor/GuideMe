@@ -39,7 +39,7 @@ $don = mysqli_fetch_assoc($rep);
 
 <!-- this page is not responsive yet -->
 
-<body>
+<>
   <header>
     <nav class="navbar px-3">
       <div class="logo_item">
@@ -64,11 +64,11 @@ $don = mysqli_fetch_assoc($rep);
   <div class="postContainer">
     <div class="article">
       <div class="leftSide">
-        <img src="../upload/postImages/<?php echo $don['mainPic']?>" class="mainImg" alt="Article Picture">
+        <img src="../upload/postImages/<?php echo $don['mainPic'] ?>" class="mainImg" id="mainpic" alt="Article Picture">
         <div class="sideImg">
-          <img src="../upload/postImages/<?php echo $don['sidePic1']?>" alt="Article Picture">
-          <img src="../upload/postImages/<?php echo $don['sidePic2']?>" alt="Article Picture">
-          <img src="../upload/postImages/<?php echo $don['sidePic3']?>" alt="Article Picture">
+          <img src="../upload/postImages/<?php echo $don['sidePic1'] ?>" id="sidePic1" alt="Article Picture">
+          <img src="../upload/postImages/<?php echo $don['sidePic2'] ?>" id="sidePic2" alt="Article Picture">
+          <img src="../upload/postImages/<?php echo $don['sidePic3'] ?>" id="sidePic3" alt="Article Picture">
         </div>
 
         <!-- Like reaction -->
@@ -104,7 +104,7 @@ $don = mysqli_fetch_assoc($rep);
 
 
       <div class="innerInfo">
-        <h1 id="title"><?php echo $don['title']?></h1>
+        <h1 id="title"><?php echo $don['title'] ?></h1>
         <div class="itemRatingContainer">
           <div class="rating">
             <img src="yellowstar.png" alt="yellowstar" />
@@ -121,7 +121,7 @@ $don = mysqli_fetch_assoc($rep);
           <span class="time">Until 5:30 PM</span>
         </div>
         <p class="innerdescreption">
-          Welcome to <?php echo $don['title']?> — your destination for quality [products or services]. Explore our curated
+          Welcome to <?php echo $don['title'] ?> — your destination for quality [products or services]. Explore our curated
           selection of [highlighted product categories], each handpicked to meet your unique needs. Whether you're
           searching for [specific items] or the latest trends, we have something for everyone.
         </p>
@@ -129,15 +129,15 @@ $don = mysqli_fetch_assoc($rep);
           <h3>Location and contact</h3>
           <div class="location">
             <img src="location.png" alt="location" />
-            <p class="itemsWilaya"><?php echo $don['address']?></p>
+            <p class="itemsWilaya"><?php echo $don['address'] ?></p>
           </div>
           <div class="location">
             <img src="e-mail.png" alt="location" />
-            <p class="itemsWilaya"><?php echo $don['emailAddress']?></p>
+            <p class="itemsWilaya"><?php echo $don['emailAddress'] ?></p>
           </div>
           <div class="phone">
             <img src="phone.png" alt="phone" />
-            <p class="itemsWilaya"><?php echo $don['phoneNumber']?></p>
+            <p class="itemsWilaya"><?php echo $don['phoneNumber'] ?></p>
           </div>
           <b>Price Range</b>
           <span>600 DA - 3900 DA</span>
@@ -146,51 +146,8 @@ $don = mysqli_fetch_assoc($rep);
           <button>Call Now</button>
         </div>
       </div>
-
-
-
-      <!-- <div class="rightSide">
-                <h1><i>Penipen Fashion</i><span><sup>Boumerder</sup></span></h1>
-                <div class="cat">
-                    <span class="designer">Cosmetics</span>
-                </div>
-                <div class="rat">
-                    <div class="rating">
-                        <input value="5" name="rating" id="star5" type="radio">
-                        <label for="star5"></label>
-                        <input value="4" name="rating" id="star4" type="radio">
-                        <label for="star4"></label>
-                        <input value="3" name="rating" id="star3" type="radio">
-                        <label for="star3"></label>
-                        <input value="2" name="rating" id="star2" type="radio">
-                        <label for="star2"></label>
-                        <input value="1" name="rating" id="star1" type="radio">
-                        <label for="star1"></label>
-                    </div>
-                </div>
-
-                <hr>
-                <div class="discrip">
-                    <p><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione unde, blanditiis quisquam
-                            fugit dicta vero corrupti nesciunt aut recusandae. Sint dolor, quaerat atque numquam amet
-                            esse voluptates. Eum, blanditiis atque.</i></p>
-                </div><br>
-                <div class="downSide">
-                    <div class="contact">
-                        <a href="#"><i class='bx bx-phone-call'></i>+213-551-761290</a><br>
-                        <a href="#"><i class='bx bx-envelope'></i>example@gmail.com</a><br>
-                        <a href="https://maps.app.goo.gl/qJnHTErrsV95uTyG8" target="_blank"><i class='bx bx-home-circle'></i>Find Us</a>
-                    </div>
-                    <div class="comments">
-                        <form action="#" method="post">
-                            <label for="comments"></label>
-                            <input type="text" name="comments" id="comments" placeholder="What do you think...">
-                        </form> -->
-                    </div>
     </div>
   </div>
-  </div>
-  </div>
-</body>
+  </body>
 
 </html>

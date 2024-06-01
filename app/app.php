@@ -1,7 +1,12 @@
 <?php
+
+use function PHPSTORM_META\sql_injection_subst;
+
 require "../system/dataControlle.php";
 
-
+if (isset($_GET['cat'])){
+  $catselect = $_GET['cat'];
+}
 
 if (isset($_GET['act'])) {
   $actionplace = $_GET['act'];
@@ -11,17 +16,20 @@ if (isset($_GET['act'])) {
 
 $sqlPost = "";
 
-if ($actionplace == 'all') {
-  $sqlPost = "SELECT * FROM posttable";
-} elseif ($actionplace == 'Boumerdes') {
-  $sqlPost = "SELECT * FROM posttable WHERE wilaya = '$actionplace'";
-} elseif ($actionplace == 'Alger') {
-  $sqlPost = "SELECT * FROM posttable WHERE wilaya = '$actionplace'";
-} elseif ($actionplace == 'Tipaza') {
-  $sqlPost = "SELECT * FROM posttable WHERE wilaya = '$actionplace'";
-} elseif ($actionplace == 'Setif') {
-  $sqlPost = "SELECT * FROM posttable WHERE wilaya = '$actionplace'";
+if (isset($actionplace) && isset($catselect)) {
+  $sqlPost = "SELECT * FROM posttable WHERE wilaya = '$actionplace' AND category = '$catselect'";
+} elseif (isset($actionplace)) {
+  if ($actionplace == 'all') {
+    $sqlPost ="SELECT * FROM posttable";
+  } else {
+    $sqlPost = "SELECT * FROM posttable WHERE wilaya = '$actionplace'";
+  }
+} 
+
+if (isset($catselect)) {
+  $sqlPost = "SELECT * FROM posttable WHERE category = '$catselect'";
 }
+
 
 $res = mysqli_query($con, $sqlPost);
 
@@ -36,7 +44,7 @@ $res = mysqli_query($con, $sqlPost);
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <title>GuideMe | Home</title>
   <link rel="stylesheet" href="../css/mainStyle.css">
-  <link rel="stylesheet" href="../css/sideStyle2.css">
+  <link rel="stylesheet" href="../css/sideStyle3.css">
   <link rel="shortcut icon" href="../items/favicon.png" type="image/png">
 </head>
 
@@ -106,10 +114,10 @@ $res = mysqli_query($con, $sqlPost);
             </div>
 
             <ul class="menu_items submenu">
-              <a href="#" class="nav_link sublink">Restaurants</a>
-              <a href="#" class="nav_link sublink">Cosmetics</a>
-              <a href="#" class="nav_link sublink">Clothing</a>
-              <a href="#" class="nav_link sublink">Grocery Stores</a>
+              <a href="app.php?cat=Restaurants" class="nav_link sublink">Restaurants</a>
+              <a href="app.php?cat=Cosmetics" class="nav_link sublink">Cosmetics</a>
+              <a href="app.php?cat=Clothing" class="nav_link sublink">Clothing</a>
+              <a href="app.php?cat=Grocery" class="nav_link sublink">Grocery Stores</a>
               <a href="#" class="nav_link sublink">Sell All Category</a>
             </ul>
           </li>

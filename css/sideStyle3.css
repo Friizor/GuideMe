@@ -1,0 +1,121 @@
+.card-list {
+  gap: 80px;
+}
+
+.trend {
+    height: fit-content;
+    width: 300px;
+    margin-left: auto;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 5px 15px 0 15px;
+    margin-right: 5px;
+    display: flex;
+    padding: 16px 10px 32px 10px;
+    border-radius: 16px;
+    z-index: 0;
+  
+    
+    position: relative;
+    transition: 0.3s ease-in-out;
+    align-items: center;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .trend:hover {
+    box-shadow: 0 1px 10px rgb(0, 0, 0);
+  }
+  
+  
+  .trendImg img {
+    height: 260px;
+    width: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+  
+  }
+  
+  .trendInfo {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    width: 200px;
+  
+    width: 250px;
+  }
+  
+  .trendInfo h3 {
+    font-size: 19px;
+    margin: 0px 0px 8px 0;
+  
+  }
+  
+  .trendInfo .trendWilaya {
+    color: rgb(140, 140, 140);
+    font-size: 13px;
+    margin: 0 0 8px 0;
+    background-color: transparent;
+    padding: 0;
+  }
+  
+  .ratingContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  
+  .ratingContainer .ratingSpan {
+    margin: 0 0 0 3px;
+    color: rgb(140, 140, 140);
+    background-color: transparent;
+    font-size: 11px;
+    padding: 0;
+  }
+  
+  .rating {
+    display: flex;
+    width: 105px;
+    justify-content: space-between;
+    margin-right: 5px;
+  }
+  
+  
+  
+  .rating img {
+    height: 19px;
+    width: 19px;
+  }
+  
+  
+  .trendInfo .open {
+    font-size: 14px;
+    font-weight: 700;
+    color: #32cd32;
+    margin: 0 5px 0 0;
+    background-color: transparent;
+    padding: 0;
+  
+  }
+  
+  .closed {
+    color: red;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 5px;
+    margin: 0 5px 0 0;
+    background-color: transparent;
+    padding: 0;
+  }
+  
+  
+  .closingDiv {
+    display: flex;
+  
+  }
+  
+  .closingDiv p {
+    margin: 0;
+    font-size: 14px;
+  }

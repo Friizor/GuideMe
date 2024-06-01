@@ -174,7 +174,7 @@ if ($email != false && $password != false) {
                         <div class="option">
                             <label for="Wil">Wilayas</label>
                             <select name="Wilayas" id="Wil" class="postSelect">
-                                <option value="Boumerder">Boumerdes</option>
+                                <option value="Boumerdes">Boumerdes</option>
                                 <option value="Alger">Alger</option>
                                 <option value="Setif">Setif</option>
                                 <option value="Tipaza">Tipaza</option>
