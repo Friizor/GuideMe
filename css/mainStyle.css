@@ -500,71 +500,78 @@ hr {
 
 }
 
-.postForm label {
-  color: var(--grey-color);
-}
-
-.postForm input[type=text] {
-  outline: none;
+.postUpload {
+  border: 1px solid #b9b9b9;
   border-radius: 10px;
-  border: 1px solid var(--grey-color-light);
-  padding-left: 8px;
-  height: 40px;
-  width: 100%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2),
+        0 5px 12px -2px rgba(0, 0, 0, 0.2),
+        0 18px 36px -6px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin: 10px auto;
+  width: fit-content;
 }
 
-.postForm textarea {
-  border: 1px solid var(--grey-color-light);
-  border-radius: 8px;
-  width: 100%;
-  height: 70px;
-  padding-left: 8px;
-  outline: none;
+.postUpload h2{
+  text-align: center;
 }
 
-.wil {
+.postUpload .postInfo {
+  margin-right: 20px;
+}
+
+.postUpload form label{
+  display: grid;
+  color: #ababab;
   margin-bottom: 5px;
 }
 
-.imagInput {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-.postForm input[type=submit] {
-  color: #fff;
-  font-size: 20px;
-  width: 300px;
-  background-color: #ff7f50;
+.postUpload form input {
   outline: none;
-  border: none;
-  border-radius: 8px;
-  height: 50px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.postForm input[type=submit]:hover {
-  background-color: #ffa98a;
-}
-
-.imagInput label {
-  display: flow-root;
-  margin: 8px;
-}
-
-.postForm select {
-  outline: none;
-  border-radius: 8px;
-  padding: 3px;
-}
-.imagInput input {
   padding: 5px;
+  text-align: center;
+  width: 358px;
+  border: 1px solid #ccc;
   border-radius: 8px;
-  background-color: #f3f3f3;
-  cursor: pointer;
 }
 
+.postUpload form .postSelect {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  color: #ababab;
+}
+
+.postForm .postInfo .option {
+  margin-top: 8px;
+  display: flex;
+}
+
+.postUpload .postimg {
+  display: flex;
+}
+
+.postUpload .postimg .sideImgDiv {
+  margin-right: 10px;
+}
+
+.postUpload .postimg input {
+  width: 175px;
+}
+
+.postUpload input[type=submit] {
+  margin-top: 8px;
+  background-color: #ff7f50;
+  color: #3f3f3f;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.postUpload input[type=submit]:hover {
+  background-color: #ff7f50a9;
+  color: #000;
+}
 
 @media (max-width: 1200px) {
   .card-list .card-item {
@@ -640,3 +647,4 @@ hr {
 }
 
 /* Fuck Me */
+/* I hate CSS */
