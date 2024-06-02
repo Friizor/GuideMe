@@ -25,7 +25,7 @@ $action = '';
 
 if (isset($_GET['idPost'])) {
     $action = 'edit';
-    $idPost = $_POST['idPost'];
+    $idPost = $_GET['idPost'];
     $sql = "SELECT * FROM posttable WHERE idPost = '$idPost'";
     $rep = mysqli_query($con, $sql);
     $don = mysqli_fetch_assoc($rep);
