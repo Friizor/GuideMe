@@ -220,15 +220,15 @@ if (isset($_GET['idPost'])) {
                 <div class="postimg">
                     <div class="sideImgDiv">
                         <label for="mainImg">Main Picture</label>
-                        <input type="file" name="mainImg" id="mainImg" value="<?php echo isset($don['mainPic']) ? $don['mainPic'] : ''; ?>" required>
+                        <input type="file" name="mainImg" id="mainImg" required>
                         <label for="sidePic">Side Picture</label>
-                        <input type="file" name="sidebar" id="sidebar" value="<?php echo isset($don['sidePic1']) ? $don['sidePic1'] : ''; ?>" required>
+                        <input type="file" name="sidebar" id="sidebar" required>
                     </div>
                     <div>
                         <label for="sidePic2">Side Picture</label>
-                        <input type="file" name="sidebar2" id="sidebar2" value="<?php echo isset($don['sidePic2']) ? $don['sidePic2'] : ''; ?>" required>
+                        <input type="file" name="sidebar2" id="sidebar2" required>
                         <label for="sidePic3">Side Picture</label>
-                        <input type="file" name="sidebar3" id="sidebar3" value="<?php echo isset($don['sidePic3']) ? $don['sidePic3'] : ''; ?>" required>
+                        <input type="file" name="sidebar3" id="sidebar3" required>
                     </div>
                 </div>
 
