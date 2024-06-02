@@ -188,6 +188,9 @@ if (isset($_GET['idPost'])) {
                         <div class="option">
                             <label for="Wil">Wilayas</label>
                             <select name="Wilayas" id="Wil" class="postSelect">
+                                <option value="<?php echo isset($don['wilaya']) ? $don['wilaya'] : 'undefined'?>">
+                                    <?php echo isset($don['wilaya']) ? $don['wilaya'] : 'set wilaya'?>
+                                </option>
                                 <option value="Boumerdes">Boumerdes</option>
                                 <option value="Alger">Alger</option>
                                 <option value="Setif">Setif</option>
