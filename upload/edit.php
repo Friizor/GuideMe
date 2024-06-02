@@ -20,3 +20,13 @@ if ($email != false && $password != false) {
 } else {
     header('Location: ../system/login-user.php');
 }
+
+
+$title = $_POST['title'];
+$descrip = $_POST['discrip'];
+$wilaya = $_POST['Wilayas'];
+$category = $_POST['Category'];
+$phoneNumber = $_POST['phone'];
+$emailAddress = $_POST['email'];
+$address = $_POST['address'];
+
