@@ -21,12 +21,21 @@ if ($email != false && $password != false) {
     header('Location: ../system/login-user.php');
 }
 
+$action = '';
 
 if (isset($_GET['idPost'])) {
     $action = 'edit';
 } else {
     $action = 'add';
 }
+
+$idPost = $_POST['idPost'];
+
+$sql = "SELECT * FROM posttable WHERE idPost = '$idPost'";
+
+$rep = mysqli_query($con, $sql);
+
+$don = mysqli_fetch_assoc($rep);
 ?>
 
 
