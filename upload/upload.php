@@ -178,7 +178,7 @@ if (isset($_GET['idPost'])) {
     <div class="container">
         <div class="postUpload">
             <h2>Add Article</h2>
-            <form action="articleAdd.php" method="post" enctype="multipart/form-data">
+            <form action="<?php echo $action == 'edit' ? 'edit.php' : 'articleAdd.php' ;?>" method="post" enctype="multipart/form-data">
                 <div class="postForm">
                     <div class="postInfo">
                         <label for="title">Title</label>
@@ -239,15 +239,13 @@ if (isset($_GET['idPost'])) {
 
     <script src="../Js/app.js"></script>
     <script>
-        const inputField = document.getElementById("phone"); // Replace "yourInputId" with the actual ID of your input field
+        const inputField = document.getElementById("phone"); 
 
         inputField.addEventListener("input", function() {
-            // Limit the input length to 10 characters
             if (this.value.length > 10) {
                 this.value = this.value.slice(0, 10);
             }
 
-            // Allow only numbers (including negative sign)
             this.value = this.value.replace(/[^0-9-]/g, "");
         });
     </script>
