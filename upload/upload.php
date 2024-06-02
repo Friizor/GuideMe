@@ -25,7 +25,7 @@ if ($email != false && $password != false) {
 if (isset($_GET['idPost'])) {
     $action = 'edit';
 } else {
-    $action = 'add'
+    $action = 'add';
 }
 ?>
 
