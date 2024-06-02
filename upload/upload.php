@@ -20,6 +20,13 @@ if ($email != false && $password != false) {
 } else {
     header('Location: ../system/login-user.php');
 }
+
+
+if (isset($_GET['idPost'])) {
+    $action = 'edit';
+} else {
+    $action = 'add'
+}
 ?>
 
 
