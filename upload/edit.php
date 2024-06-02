@@ -21,7 +21,7 @@ if ($email != false && $password != false) {
     header('Location: ../system/login-user.php');
 }
 
-
+$idPost=$_GET['idPost'];
 $title = $_POST['title'];
 $descrip = $_POST['discrip'];
 $wilaya = $_POST['Wilayas'];
@@ -61,3 +61,25 @@ move_uploaded_file($tempname, $folder);
 move_uploaded_file($tempname1, $folder1);
 move_uploaded_file($tempname2, $folder2);
 move_uploaded_file($tempname3, $folder3);
+
+
+$edit_data = 
+                "UPDATE `posttable` SET 
+                `title`='$title',
+                `description`='$descrip',
+                `wilaya`='$wilaya',
+                `category`='$category',
+                `phoneNumber`='$phoneNumber',
+                `emailAddress`='$emailAddress',
+                `address`='$address',
+                `mainPic`='$file_name',
+                `sidePic1`='$file_name1',
+                `sidePic2`='$file_name2',
+                `sidePic3`='$file_name3' 
+                 WHERE idPost = '$idPost'";
+
+
+
+$data_check = mysqli_query($con, $edit_data);
+
+header('location: ../profil/profile.php');

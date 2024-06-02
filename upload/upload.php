@@ -22,10 +22,10 @@ if ($email != false && $password != false) {
 }
 
 $action = '';
+$idPost = $_GET['idPost'];
 
 if (isset($_GET['idPost'])) {
     $action = 'edit';
-    $idPost = $_GET['idPost'];
     $sql = "SELECT * FROM posttable WHERE idPost = '$idPost'";
     $rep = mysqli_query($con, $sql);
     $don = mysqli_fetch_assoc($rep);
@@ -178,7 +178,7 @@ if (isset($_GET['idPost'])) {
     <div class="container">
         <div class="postUpload">
             <h2>Add Article</h2>
-            <form action="<?php echo $action == 'edit' ? 'edit.php' : 'articleAdd.php' ;?>" method="post" enctype="multipart/form-data">
+            <form action="<?php echo $action == 'edit' ? "edit.php?idPost=$idPost" : 'articleAdd.php' ;?>" method="post" enctype="multipart/form-data">
                 <div class="postForm">
                     <div class="postInfo">
                         <label for="title">Title</label>
