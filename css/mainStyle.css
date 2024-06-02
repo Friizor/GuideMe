@@ -93,11 +93,11 @@ body {
   outline: none;
   border: none;
 
-  background-color:#fff;
+  background-color: #fff;
   color: var(--grey-color);
   /* border: 1px solid var(--grey-color-light); */
   padding: 0 20px;
-  
+
 }
 
 .searchIcon {
@@ -108,9 +108,10 @@ body {
   justify-content: center;
   padding: 0 10px;
 }
+
 .searchIcon img {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .navbar_content {
@@ -334,19 +335,20 @@ body {
 .category-container {
   list-style: none;
   display: flex;
-  border-bottom: 1px solid rgba(177, 168, 168, 0.2) ;
+  border-bottom: 1px solid rgba(177, 168, 168, 0.2);
 
- 
+
 }
 
 .category {
-    padding: 13px 24px;
+  padding: 13px 24px;
 
 }
 
 .category:hover {
-    background-color: #f3f3f3;
+  background-color: #f3f3f3;
 }
+
 .category-container a {
   text-decoration: none;
   color: #707070;
@@ -445,7 +447,7 @@ body {
   margin-top: 10px;
 }
 
-.personalInfo .log-out button{
+.personalInfo .log-out button {
   padding: 5px;
   border-radius: 8px;
   border: none;
@@ -483,7 +485,7 @@ hr {
   border-radius: 8px;
 }
 
-.edit_profil h1{
+.edit_profil h1 {
   font-weight: normal;
   border-bottom: 1px solid #b2b2b2;
   width: fit-content;
@@ -504,13 +506,13 @@ hr {
   padding-left: 20px;
 }
 
-.edit_profil form input[type=submit]{
+.edit_profil form input[type=submit] {
   padding: 0;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.edit_profil form input[type=submit]:hover{
+.edit_profil form input[type=submit]:hover {
   color: #f5f5f5;
   background-color: #ff7f50;
 
@@ -521,14 +523,14 @@ hr {
   border: 1px solid #b9b9b9;
   border-radius: 10px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2),
-        0 5px 12px -2px rgba(0, 0, 0, 0.2),
-        0 18px 36px -6px rgba(0, 0, 0, 0.2);
+    0 5px 12px -2px rgba(0, 0, 0, 0.2),
+    0 18px 36px -6px rgba(0, 0, 0, 0.2);
   padding: 10px;
   margin: 10px auto;
   width: fit-content;
 }
 
-.postUpload h2{
+.postUpload h2 {
   text-align: center;
 }
 
@@ -536,7 +538,7 @@ hr {
   margin-right: 20px;
 }
 
-.postUpload form label{
+.postUpload form label {
   display: grid;
   color: #ababab;
   margin-bottom: 5px;
@@ -704,6 +706,7 @@ hr {
   border-radius: 8px;
 
 }
+
 .trendInfo {
   display: flex;
   flex-direction: column;
@@ -712,6 +715,7 @@ hr {
 
   width: 250px;
 }
+
 .trendInfo h3 {
   font-size: 19px;
   margin: 0px 0px 8px 0;
@@ -721,7 +725,7 @@ hr {
 .trendInfo .trendWilaya {
   color: rgb(140, 140, 140);
   font-size: 13px;
-  margin:0 0 8px 0;
+  margin: 0 0 8px 0;
   background-color: transparent;
   padding: 0;
 }
@@ -734,12 +738,13 @@ hr {
 
 
 .ratingContainer .ratingSpan {
-  margin:0 0 0 3px;
+  margin: 0 0 0 3px;
   color: rgb(140, 140, 140);
- background-color: transparent;
+  background-color: transparent;
   font-size: 11px;
   padding: 0;
 }
+
 .rating {
   display: flex;
   width: 105px;
@@ -759,10 +764,10 @@ hr {
   font-size: 14px;
   font-weight: 700;
   color: #32cd32;
-  margin:0 5px 0 0;
+  margin: 0 5px 0 0;
   background-color: transparent;
   padding: 0;
-  
+
 }
 
 .closed {
@@ -770,7 +775,7 @@ hr {
   font-size: 14px;
   font-weight: 700;
   margin-right: 5px;
-  margin:0 5px 0 0;
+  margin: 0 5px 0 0;
   background-color: transparent;
   padding: 0;
 }
@@ -778,8 +783,9 @@ hr {
 
 .closingDiv {
   display: flex;
-  
+
 }
+
 .closingDiv p {
   margin: 0;
   font-size: 14px;
