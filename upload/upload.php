@@ -25,17 +25,15 @@ $action = '';
 
 if (isset($_GET['idPost'])) {
     $action = 'edit';
+    $idPost = $_POST['idPost'];
+    $sql = "SELECT * FROM posttable WHERE idPost = '$idPost'";
+    $rep = mysqli_query($con, $sql);
+    $don = mysqli_fetch_assoc($rep);
 } else {
     $action = 'add';
 }
 
-$idPost = $_POST['idPost'];
 
-$sql = "SELECT * FROM posttable WHERE idPost = '$idPost'";
-
-$rep = mysqli_query($con, $sql);
-
-$don = mysqli_fetch_assoc($rep);
 ?>
 
 
@@ -184,9 +182,9 @@ $don = mysqli_fetch_assoc($rep);
                 <div class="postForm">
                     <div class="postInfo">
                         <label for="title">Title</label>
-                        <input type="text" name="title" id="title" placeholder="Article title..." required>
+                        <input type="text" name="title" id="title" placeholder="Article title..." value="<?php echo isset($don['title']) ? $don['title'] : ''; ?>" required>
                         <label for="discrip">Description</label>
-                        <input type="text" name="discrip" id="discrip" placeholder="Descripe your article..." required>
+                        <input type="text" name="discrip" id="discrip" placeholder="Descripe your article..." value="<?php echo isset($don['description']) ? $don['description'] : ''; ?>" required>
                         <div class="option">
                             <label for="Wil">Wilayas</label>
                             <select name="Wilayas" id="Wil" class="postSelect">
@@ -206,25 +204,25 @@ $don = mysqli_fetch_assoc($rep);
                     </div>
                     <div class="contact">
                         <label for="phone">Phone Number</label>
-                        <input type="number" name="phone" id="phone" placeholder="contact number" required>
+                        <input type="number" name="phone" id="phone" placeholder="contact number" value="<?php echo isset($don['phoneNumber']) ? $don['phoneNumber'] : ''; ?>" required>
                         <label for="email">Email Address</label>
-                        <input type="email" name="email" id="email" placeholder="contact email..." required>
+                        <input type="email" name="email" id="email" placeholder="contact email..." value="<?php echo isset($don['emailAddress']) ? $don['emailAddress'] : ''; ?>" required>
                         <label for="address">Address</label>
-                        <input type="text" name="address" id="address" placeholder="Please enter a google map link..." required>
+                        <input type="text" name="address" id="address" placeholder="Please enter a google map link..." value="<?php echo isset($don['address']) ? $don['address'] : ''; ?>" required>
                     </div>
                 </div>
                 <div class="postimg">
                     <div class="sideImgDiv">
                         <label for="mainImg">Main Picture</label>
-                        <input type="file" name="mainImg" id="mainImg" required>
+                        <input type="file" name="mainImg" id="mainImg" value="<?php echo isset($don['mainPic']) ? $don['mainPic'] : ''; ?>" required>
                         <label for="sidePic">Side Picture</label>
-                        <input type="file" name="sidebar" id="sidebar" required>
+                        <input type="file" name="sidebar" id="sidebar" value="<?php echo isset($don['sidePic1']) ? $don['sidePic1'] : ''; ?>" required>
                     </div>
                     <div>
                         <label for="sidePic2">Side Picture</label>
-                        <input type="file" name="sidebar2" id="sidebar2" required>
+                        <input type="file" name="sidebar2" id="sidebar2" value="<?php echo isset($don['sidePic2']) ? $don['sidePic2'] : ''; ?>" required>
                         <label for="sidePic3">Side Picture</label>
-                        <input type="file" name="sidebar3" id="sidebar3" required>
+                        <input type="file" name="sidebar3" id="sidebar3" value="<?php echo isset($don['sidePic3']) ? $don['sidePic3'] : ''; ?>" required>
                     </div>
                 </div>
 
