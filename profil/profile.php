@@ -206,7 +206,7 @@ $rep = mysqli_query($con, $sql);
                             <a href="sup.php?idPost=<?php echo $don['idPost'] ?>">
                                 <i class='bx bx-trash' style='color:#ff0000'></i>
                             </a>
-                            <a href="../upload/upload.php?idPOst=<?php echo $don['idPost'] ?>">
+                            <a href="../upload/upload.php?idPost=<?php echo $don['idPost'] ?>">
                                 <i class='bx bx-edit-alt' style='color:#41ff20'></i>
                             </a>
                         </div>
