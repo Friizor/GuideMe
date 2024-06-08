@@ -30,3 +30,20 @@
 <p>GuideMe is more than just a website; it's a thriving community of travel enthusiasts. Share your local knowledge, discover fantastic new places, and plan your next adventure with a network of passionate explorers.</p>
 
 <p>Contribute today and be a part of building the most comprehensive and informative tourist guide for travelers worldwide!</p>
+
+
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Friizor/GuideMe.git
+   ```
+2. Navigate to the project directory:
+`````bash
+cd GuideMe
+`````
+
+## Contributing
+
+Contributions are welcome! Please submit a pull request or open an issue to discuss your ideas.
