@@ -46,4 +46,11 @@ cd GuideMe
 
 ## Contributing
 
-Contributions are welcome! Please submit a pull request or open an issue to discuss your ideas.
+Contributions are welcome! Please submit a pull request or open an issue to discuss your ideas. To contribute to GuideMe, please follow these steps:
+
+- Fork the repository.
+- Create a new branch for your feature or bugfix.
+- Make your changes and commit them with clear messages.
+- Push your changes to your fork.
+- Open a pull request to the main branch of this repository.
+
