@@ -54,4 +54,4 @@ Contributions are welcome! Please submit a pull request or open an issue to disc
 - Push your changes to your fork.
 - Open a pull request to the main branch of this repository.
 
-`Made by Friizor`
+`Made by Friizor & Islam Hamdaoui`
